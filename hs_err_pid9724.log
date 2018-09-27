@@ -1,0 +1,152 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=9724, tid=0x000000000000249c
+#
+# JRE version:  (8.0_121-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000003ce800):  JavaThread "Unknown thread" [_thread_in_vm, id=9372, stack(0x00000000026e0000,0x00000000027e0000)]
+
+Stack: [0x00000000026e0000,0x00000000027e0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000003ce800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9372, stack(0x00000000026e0000,0x00000000027e0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 75264K, used 1290K [0x000000076c380000, 0x0000000771780000, 0x00000007c0000000)
+  eden space 64512K, 2% used [0x000000076c380000,0x000000076c4c2900,0x0000000770280000)
+  from space 10752K, 0% used [0x0000000770d00000,0x0000000770d00000,0x0000000771780000)
+  to   space 10752K, 0% used [0x0000000770280000,0x0000000770280000,0x0000000770d00000)
+ ParOldGen       total 172032K, used 0K [0x00000006c4a00000, 0x00000006cf200000, 0x000000076c380000)
+  object space 172032K, 0% used [0x00000006c4a00000,0x00000006c4a00000,0x00000006cf200000)
+ Metaspace       used 770K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011ba0000,0x0000000012380000] byte_map_base: 0x000000000e57b000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a50b6d0
+ Begin Bits: [0x00000000130b0000, 0x0000000016f88000)
+ End Bits:   [0x0000000016f88000, 0x000000001ae60000)
+
+Polling page: 0x00000000001c0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000027e0000, 0x0000000002a50000, 0x00000000117e0000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.042 loading class java/lang/Short
+Event: 0.042 loading class java/lang/Short done
+Event: 0.042 loading class java/lang/Integer
+Event: 0.042 loading class java/lang/Integer done
+Event: 0.042 loading class java/lang/Long
+Event: 0.042 loading class java/lang/Long done
+Event: 0.043 loading class java/lang/NullPointerException
+Event: 0.043 loading class java/lang/NullPointerException done
+Event: 0.043 loading class java/lang/ArithmeticException
+Event: 0.043 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013fe30000 - 0x000000013fe67000 	D:\Java\jdk1.8.0_121\bin\java.exe
+0x0000000076ed0000 - 0x000000007706f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076cb0000 - 0x0000000076dcf000 	C:\Windows\system32\kernel32.dll
+0x000007fefcbc0000 - 0x000007fefcc2a000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefea80000 - 0x000007fefeb5b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd180000 - 0x000007fefd21f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefeeb0000 - 0x000007fefeecf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefd220000 - 0x000007fefd34d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076dd0000 - 0x0000000076eca000 	C:\Windows\system32\USER32.dll
+0x000007fefee40000 - 0x000007fefeea7000 	C:\Windows\system32\GDI32.dll
+0x000007fefee30000 - 0x000007fefee3e000 	C:\Windows\system32\LPK.dll
+0x000007fefe670000 - 0x000007fefe73b000 	C:\Windows\system32\USP10.dll
+0x000007fefb400000 - 0x000007fefb5f4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefe550000 - 0x000007fefe5c1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff0b0000 - 0x000007feff0de000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd050000 - 0x000007fefd159000 	C:\Windows\system32\MSCTF.dll
+0x0000000072d50000 - 0x0000000072e22000 	D:\Java\jdk1.8.0_121\jre\bin\msvcr100.dll
+0x0000000059cf0000 - 0x000000005a58b000 	D:\Java\jdk1.8.0_121\jre\bin\server\jvm.dll
+0x000007fef9f20000 - 0x000007fef9f29000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefd000000 - 0x000007fefd04d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe740000 - 0x000007fefe748000 	C:\Windows\system32\NSI.dll
+0x000007fefa4a0000 - 0x000007fefa4db000 	C:\Windows\system32\WINMM.dll
+0x000007fefbbd0000 - 0x000007fefbbdc000 	C:\Windows\system32\VERSION.dll
+0x0000000077080000 - 0x0000000077087000 	C:\Windows\system32\PSAPI.DLL
+0x0000000072d40000 - 0x0000000072d4f000 	D:\Java\jdk1.8.0_121\jre\bin\verify.dll
+0x0000000072d10000 - 0x0000000072d39000 	D:\Java\jdk1.8.0_121\jre\bin\java.dll
+0x0000000072cf0000 - 0x0000000072d06000 	D:\Java\jdk1.8.0_121\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=D:\apache-maven-3.3.9\bin\..\bin\m2.conf -Dmaven.home=D:\apache-maven-3.3.9\bin\.. -Dmaven.multiModuleProjectDirectory=E:\idea_work\girl 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run
+java_class_path (initial): D:\apache-maven-3.3.9\bin\..\boot\plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Java\jdk1.8.0_121
+CLASSPATH=D:\Java\jdk1.8.0_121\lib\dt.jar;D:\Java\jdk1.8.0_121\lib\tools.jar;
+PATH=D:\Oracle\product\11.2.0\dbhome_1\bin;C:\Program Files (x86)\Google\Chrome\Application\;d:\Anaconda2;d:\Anaconda2\Library\mingw-w64\bin;d:\Anaconda2\Library\usr\bin;d:\Anaconda2\Library\bin;d:\Anaconda2\Scripts;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.3.9\bin;D:\Java\jdk1.8.0_121\bin;D:\Java\jdk1.8.0_121\jre\bin;D:\apache-maven-3.3.9\bin;C:\Program Files\Lenovo\Fingerprint Manager Pro\;d:\Git\cmd;D:\PuTTY\;D:\node-v10.8.0-win-x64;D:\node-v10.8.0-win-x64\node-global;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\
+USERNAME=GLZ
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24000)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 16472044k(1434852k free), swap 16470168k(5876k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.121-b13) for windows-amd64 JRE (1.8.0_121-b13), built on Dec 12 2016 18:21:36 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Aug 26 19:53:18 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
